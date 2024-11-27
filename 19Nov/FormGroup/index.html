@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="formGroup.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <main>
+      <div id="form-head">
+        <h1>Form-Group</h1>
+        <p>Just click and add the input</p>
+      </div>
+      <div id="form-div">
+        <form action="#" onsubmit="SubmitDetails(event)">
+          <div class="leb-in">
+            <label for="firstName">FirstName</label>
+            <input
+              type="text"
+              placeholder="Ravi"
+              id="firstName"
+              required="true"
+              minlength="3"
+              maxlength="30"
+            />
+          </div>
+          <div class="leb-in">
+            <label for="lastName">LastName</label>
+            <input
+              type="text"
+              id="lastName"
+              placeholder="Teja"
+              required="true"
+              minlength="3"
+              maxlength="30"
+            />
+          </div>
+          <div id="eduDetails">
+            <div id="edu-Head">
+              <h3>Add Education Details</h3>
+              <button id="addEdu" onclick="addFormGroup(event)">Add</button>
+            </div>
+            <div id="eduinfo">
+              <!-- <div class="eduinput">
+                            <div class="leb-in">
+                                <label for="degree">Degree</label>
+                                <input type="text" id="degree">
+                            </div>
+                            <div class="leb-in">
+                                <label for="year" >Year</label>
+                                <input type="text" id="year">
+                            </div>
+                            <div class="leb-in ">
+                                <label for="insitution" >Insitution </label>
+                                <input type="text" id="institution">
+                            </div>
+                            <button class="dlt" onclick="deleteEle(event)">delete</button>
+                        </div> -->
+            </div>
+          </div>
+          <input type="submit" id="formSubmit" />
+        </form>
+      </div>
+    </main>
+  </body>
+</html>

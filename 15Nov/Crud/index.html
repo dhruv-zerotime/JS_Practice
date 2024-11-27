@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="crud.js"></script>
+</head>
+
+<body>
+    <header style="font-size: xx-large">NOTE CRUD LOCALHOST</header>
+    <main>
+        <!-- buttons for creating deleting and showing all notes -->
+        <div>
+            <button onclick="showCreateForm()" class="main-btn" style="background-color: rgb(99, 167, 113)">
+                Create
+            </button>
+            <button onclick="DeleteAll()" class="main-btn" style="background-color: rgb(230, 57, 14)">
+                Delete all
+            </button>
+            <button onclick="showAllNotes()" class="main-btn" style="background-color: rgb(66, 61, 32)">
+                All Notes
+            </button>
+        </div>
+        <!-- This one shows the all the individual Notes -->
+        <div id="indiNotes"></div>
+        <!--All the contents go here -->
+        <div id="contents">
+            <!--this div shows all the notes -->
+            <div id="AllNotes">
+                <h1>All Notes</h1>
+            </div>
+            <!--create form Notes -->
+            <div id="Create">
+                <h1>Create NOTE</h1>
+                <form action="#" onsubmit="CreateNewNote(event)">
+                    <label for="createNote">write a note you wanna add :
+                        <input id="createNote" type="text" required="true" maxlength="100" minlength="3" />
+                    </label>
+                    <label for="NoteContent">Notes Content:
+                        <textarea id="NoteContent" rows="10" cols="70" " required=" true" maxlength="500"
+                            minlength="15"></textarea>
+                    </label>
+                    <button type="submit" class="in-form" style="background-color: rgb(17, 138, 64)">
+                        createNote
+                    </button>
+                </form>
+            </div>
+
+            <!--update form notes-->
+            <div id="Update">
+                <form action="#" onsubmit="UpdateNotes(event)">
+                    <label for="UpdateNote">write a note you wanna add :
+                        <input id="UpdateNote" type="text" required="true" maxlength="100" minlength="3" />
+                    </label>
+                    <label for="UpdateContent">Notes Content:
+                        <textarea id="UpdateContent" rows="10" cols="70" required="true" maxlength="500"
+                            minlength="3"></textarea>
+                    </label>
+                    <button type="submit" class="in-form" style="background-color: rgb(109, 148, 255)">
+                        UpdateNote
+                    </button>
+                </form>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
